@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Toyota Sign In Form</title>
+    <style>
+      /* Giving the background an image */
+      body {
+        background-image: url("../public/images/toyota2.jpg");
+        background-size: 100%;
+      }
+
+      /* Styling the container section */
+      .container {
+        width: 500px;
+        height: 400px;
+        color: #fff;
+        margin: 40px 20px 20px 200px;
+      }
+
+      /* styling the login form */
+      .login-form {
+        width: 500px;
+        margin: 0 20px;
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+      .login-form h1 {
+        text-align: center;
+        color: #ddd;
+        font-size: 24px;
+        padding: 20px 0 20px 0;
+      }
+      .login-form input[type="password"],
+      .login-form input[type="text"] {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #dddddd;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 18px;
+      }
+      .login-form input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        background-color: #535b63;
+        border: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-weight: bold;
+        color: #ffffff;
+      }
+
+      /* Styling the register page link */
+      .register {
+        text-align: center;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        color: #190233;
+      }
+
+      /* The register link styling */
+      .register a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #81118b;
+      }
+
+      /* On hover the link font size increases */
+      .register a:hover {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The main container section of the page -->
+    <div class="container">
+      <div class="login-form">
+        <h1>Please log in</h1>
+
+        <!-- The login form  -->
+        <form
+          name="signInForm"
+          onsubmit="return validSignInForm()"
+          action="auth"
+          method="POST"
+        >
+          <!-- The input field for the user name -->
+          <input type="text" name="username" placeholder="Username" required />
+
+          <!-- The input field for the password -->
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+
+          <!-- THe submit button for the form -->
+          <input type="submit" />
+        </form>
+      </div>
+
+      <!-- The register section links to register page -->
+      <div class="register">
+        <p>If you don't have an account...</p>
+        <a href="/signup">Register here</a>
+      </div>
+    </div>
+    <script src="../public/js/main.js"></script>
+  </body>
+</html>
